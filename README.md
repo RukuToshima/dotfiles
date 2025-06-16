@@ -3,7 +3,7 @@
 これは、私個人の開発環境設定ファイル（dotfiles）を管理するためのリポジトリです。
 zshやその他のツールの設定をここに集約し、どのPCでも同じ環境を素早く再現できるようにしています。
 
-![(https://github.com/RukuToshima/dotfiles/blob/main/images/image.png?raw=true)]
+![ターミナルのスクリーンショット](https://github.com/RukuToshima/dotfiles/blob/main/images/image.png?raw=true)
 
 ---
 
