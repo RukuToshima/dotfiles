@@ -1,0 +1,28 @@
+# GitHub専用設定（RemoteCommandを無効化）
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+    RemoteCommand none
+    RequestTTY no
+
+# SSH設定ファイル
+# リモート接続時のデフォルト設定
+# 例: 特定のホストに接続する場合
+# Host your-remote-server
+#     HostName your-server-ip-or-domain
+#     User your-username
+#     Port 22
+#     RemoteCommand "cd /path/to/your/project && exec $SHELL"
+#     RequestTTY yes
+
+# デフォルト設定（すべてのホストに適用）
+Host *
+    # リモート接続時にコマンド実行ディレクトリに移動
+    RemoteCommand "if [ -n \"$SSH_PWD\" ]; then cd \"$SSH_PWD\" 2>/dev/null || cd ~; else cd ~; fi && exec $SHELL"
+    RequestTTY yes
+    # 接続を維持
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    # 現在のディレクトリを環境変数として転送
+    SendEnv SSH_PWD
