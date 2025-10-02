@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	you-should-use
+	zsh-you-should-use
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
